@@ -23,22 +23,6 @@ const Grid = ({counter, counterFalse}) => {
     shuffle(memorys)
   },[])
 
-  const field = memorys.map((Item, index) => {
-    //{console.log(Item.show)}
-        return(
-        
-        <li id = {index} className={Item.show ? "card open" : "card"} key = {index}>
-            <button onClick={() => {pairname === "" ? firstChoice(Item, index) : searchMatch(Item, index)}}>
-               {Item.show ? <Item.icon style = {{ width: 100, height: 100}}/> : ""}</button>
-        </li>
-
-        
-      )})
-
- /* useEffect(() => {
-    
-  }, [memorys]) */
-
   function restartGame(){
     setCount(0); setCountMoves(0); setCountFalse(0); setIndiz(0)
     setPairname(""); setPairname2(""); 
